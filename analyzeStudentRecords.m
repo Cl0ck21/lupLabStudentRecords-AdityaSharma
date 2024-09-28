@@ -24,5 +24,19 @@ for ii=1:size(CS_GPA_Differences,2)
     end
 end
 
-noZerosCS_GPA_Differences
+% going with median rm outliers bc quartiles and median are the only 2 which make sense, and
+% data is preseumably normally distributed since we expect there to be a
+% generally common impact of an internship
+
+% decided to remove outliers bc the average gpa Diff was about 0.07, which
+% seems low when you look at the data. after removing 1 outlier we get avg
+% = .1256 which seems more appropriate
+
+% we can use this to conclude that internships boost gpa by a moderate amount on avg (a large amount would be more like .3-.5, small <.1) 
+noOutliersNoZeros_CS_GPA_Differences = rmoutliers(noZerosCS_GPA_Differences, "median")
+size(noZerosCS_GPA_Differences,2)
+size(noOutliersNoZeros_CS_GPA_Differences,2)
+
+avgCS_GpaDiff
+mean(noOutliersNoZeros_CS_GPA_Differences)
 
