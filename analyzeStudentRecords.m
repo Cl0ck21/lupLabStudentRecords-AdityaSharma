@@ -47,4 +47,3 @@ mean(noOutliersNoZeros_CS_GPA_Differences)
 
 [gpaWith, gpaWithout, avgGpaWith, avgGpaWithout, overallAvgGpaDiffWithWithoutInternships] = overallGPAsWithAndWithoutInternships(studentRecordsTable, studentInternshipQuarters)
 
-
