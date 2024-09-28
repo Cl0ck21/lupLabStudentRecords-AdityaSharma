@@ -15,5 +15,14 @@ for ii = 1:(length(studentRecordsTable.Properties.VariableNames))
     end
 end
 
-[first, second] = avgGpaChangeAfterInternship(studentRecordsTable, colTitles)
+[CS_GPA_Differences, avgCS_GpaDiff] = avgGpaChangeAfterInternship(studentRecordsTable, colTitles)
+
+noZerosCS_GPA_Differences = [];
+for ii=1:size(CS_GPA_Differences,2)
+    if(CS_GPA_Differences(ii) ~= 0)
+        noZerosCS_GPA_Differences = [noZerosCS_GPA_Differences,CS_GPA_Differences(ii)];
+    end
+end
+
+noZerosCS_GPA_Differences
 
