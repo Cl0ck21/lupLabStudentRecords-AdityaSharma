@@ -1,4 +1,4 @@
-function [gpaChangeArr, avgGpaChange] = avgGpaChangeAfterInternship(data, colTitles)
+function [gpaChangeArr, avgGpaChange, studentInternshipQuarters] = avgGpaChangeAfterInternship(data, colTitles)
 
 % first identify internship quarters
 
@@ -8,17 +8,18 @@ function [gpaChangeArr, avgGpaChange] = avgGpaChangeAfterInternship(data, colTit
 % init arr to track which students had an internship, if the value is ___
 % the student did not have an internship
 
-studentInternshipQuarters = strings(1, size(data, 2));
+studentInternshipQuarters = strings(1, size(data, 1));
 
 timeIndexes = contains(data.Properties.VariableNames, 'Timestamp');
-for ii=1:size(data,2)
+for ii=1:size(data,1)
     studentInternshipQuarters{1, ii} = internshipQuarterCheck(data(ii,:), timeIndexes, ii);
 end
 
 % for each student, calculate their average gpa before and after their
 % internship
-gpaChangeArr = zeros(1, size(data,2));
-for ii=1:size(data,2)
+gpaChangeArr = zeros(1, size(data,1));
+for ii=1:size(data,1)
+
     % if this is a student who had an internship
     if (false == strcmp(studentInternshipQuarters{1,ii}, 'null'))
         % find the column index of the quarter after the internship
@@ -84,5 +85,3 @@ for ii=1:size(gpaChangeArr, 2)
 end
 
 avgGpaChange = (avg) / avgCount;
-
-% todo: gpa diff is incorrect nums
