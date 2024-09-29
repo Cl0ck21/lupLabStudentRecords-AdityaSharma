@@ -1,5 +1,5 @@
 % read csv
-studentRecordsTable = readtable("fake_student_records.csv")
+studentRecordsTable = readtable("fake_student_records.csv");
 
 % initialize 1d vector of strings for column titles
 colTitles = strings([1, length(studentRecordsTable.Properties.VariableNames)]);
@@ -15,11 +15,16 @@ for ii = 1:(length(studentRecordsTable.Properties.VariableNames))
     end
 end
 
-[CS_GPA_Differences, noZerosCS_GPA_Differences, avgCS_GpaDiff, studentInternshipQuarters] = avgGpaChangeAfterInternship(studentRecordsTable, colTitles)
+[CS_GPA_Differences, noZerosCS_GPA_Differences, avgCS_GpaDiff, studentInternshipQuarters] = avgGpaChangeAfterInternship(studentRecordsTable, colTitles);
 % dev: now we will check avg gpa of those with internships vs those
 % without. we can either do a graph of those with internships vs without
 % over all their quarters with diff colors, or graph before internship, after, and those
 % without. also can just get average overall gpas.
 
-[gpaWith, gpaWithout, avgGpaWith, avgGpaWithout, overallAvgGpaDiffWithWithoutInternships] = overallGPAsWithAndWithoutInternships(studentRecordsTable, studentInternshipQuarters)
+[gpaWith, gpaWithout, avgGpaWith, avgGpaWithout, overallAvgGpaDiffWithWithoutInternships] = overallGPAsWithAndWithoutInternships(studentRecordsTable, studentInternshipQuarters);
+
+% seems like there is no relationship between gpa and credits, we may
+% expect higher gpa with fewer credits or vice versa, but since there is no
+% trend in the graphs, we can conclude there is no correlation
+GPAvsTotalCredits(studentRecordsTable);
 
