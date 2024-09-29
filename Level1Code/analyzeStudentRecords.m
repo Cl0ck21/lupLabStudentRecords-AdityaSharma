@@ -28,3 +28,5 @@ end
 % trend in the graphs, we can conclude there is no correlation
 GPAvsTotalCredits(studentRecordsTable);
 
+GPAvsCreditsPerQuarter(studentRecordsTable);
+
