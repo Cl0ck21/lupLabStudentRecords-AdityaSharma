@@ -1,10 +1,9 @@
 function [] = GPAvsTotalCredits(data)
     % graph GPA vs Total Credits for each student
     
-    overallGpaArr = getOverallGPAs(data)
+    overallGpaArr = getOverallGPAs(data);
     
-    [csTotalUnitsArr, totalUnitsArr] = getTotalUnits(data)
-    
+    [csTotalUnitsArr, totalUnitsArr] = getTotalUnits(data);
     
     figure(1);
     scatter(csTotalUnitsArr, overallGpaArr)
