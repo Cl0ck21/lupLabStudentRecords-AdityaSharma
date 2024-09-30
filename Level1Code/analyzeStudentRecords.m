@@ -26,20 +26,20 @@ end
 % seems like there is no relationship between gpa and totalled credits, we may
 % expect higher gpa with fewer credits or vice versa, but since there is no
 % trend in the graphs, we can conclude there is no correlation
-%GPAvsTotalCredits(studentRecordsTable);
+GPAvsTotalCredits(studentRecordsTable);
 
 % no relationship between gpa and credits per quarter, probably due to
 % randomly generated data. the difference between this analysis and the
 % previous one is that this one is on a per quarter basis, and looked at
 % gpa and credits per quarter, where the last one only looked at final gpas
 % and credits
-%GPAvsCreditsPerQuarter(studentRecordsTable);
+GPAvsCreditsPerQuarter(studentRecordsTable);
 
 
 % no relationships over time, data seems very random, but the distribution
 % of data seems different for each of these parameters, will try to fit to
 % distributions to test this.
-%graphGPAandUnitsOverTime(studentRecordsTable);
+graphGPAandUnitsOverTime(studentRecordsTable);
 
 % in terms of tightness of distribution, i think it goes overall gpa, cs
 % gpa, total units, cs units. my guess is a change in range and a degree of
@@ -55,4 +55,7 @@ end
 % the null hypothesis, this seems to be because of the dip around the
 % center of the distribution.
 estimateProbDist(studentRecordsTable);
+
+
+graphGPAvsUnitsWithInternshipColor(studentRecordsTable);
 
