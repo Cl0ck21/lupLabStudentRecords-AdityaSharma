@@ -27,15 +27,33 @@ figure(13)
 plot(csLogParams)
 title('Logistic Dist Fit of Cs Gpa Values')
 
-disp("Is CS Gpa uniform?")
-isuniform(csGpaArray)
+%disp("Is CS Gpa uniform?")
+%isuniform(csGpaArray)
 
-disp("Normal p value for CS GPA: ")
-pNorm
-disp("Weibull p value for CS GPA: ")
-pWei
-disp("Logistic p value for CS GPA: ")
-pLog
+%disp("Normal p value for CS GPA: ")
+%pNorm
+%disp("Weibull p value for CS GPA: ")
+%pWei
+%disp("Logistic p value for CS GPA: ")
+%pLog
+
+
+pValArray = [pNorm, pWei, pLog];
+
+csGpaHighestProb = max(pValArray);
+
+maxIndex = find(pValArray==csGpaHighestProb);
+switch maxIndex
+    case 1
+        disp("Most likely dist for Cs Gpa data is Normal Distribution.")
+    case 2
+        disp("Most likely dist for Cs Gpa data is Weibull Distribution.")
+    case 3
+        disp("Most likely dist for Cs Gpa data is Logistic Distribution.")
+    otherwise
+        error("switch for Cs Gpa Data did not work")
+end
+disp(csGpaHighestProb(maxIndex))
 
 
 % Overall Cs Gpa Fitting
@@ -60,15 +78,33 @@ figure(16)
 plot(csOverLogParams)
 title('Logistic Dist Fit of Overall Cs Gpa Values')
 
-disp("Is Overall CS Gpa uniform?")
-isuniform(overallCsGpaArray)
+%disp("Is Overall CS Gpa uniform?")
+%isuniform(overallCsGpaArray)
 
-disp("Normal p value for Overall CS GPA: ")
-pOverNorm
-disp("Weibull p value for Overall CS GPA: ")
-pOverWei
-disp("Logistic p value for Overall CS GPA: ")
-pOverLog
+%disp("Normal p value for Overall CS GPA: ")
+%pOverNorm
+%disp("Weibull p value for Overall CS GPA: ")
+%pOverWei
+%disp("Logistic p value for Overall CS GPA: ")
+%pOverLog
+
+
+pValArray = [pOverNorm, pOverWei, pOverLog];
+
+overallGpaHighestProb = max(pValArray);
+
+maxIndex = find(pValArray==overallGpaHighestProb);
+switch maxIndex
+    case 1
+        disp("Most likely dist for Overall Gpa data is Normal Distribution.")
+    case 2
+        disp("Most likely dist for Overall Gpa data is Weibull Distribution.")
+    case 3
+        disp("Most likely dist for Overall Gpa data is Logistic Distribution.")
+    otherwise
+        error("switch for Overall Gpa Data did not work")
+end
+disp(overallGpaHighestProb(maxIndex))
 
 % CS Units Fitting
 
@@ -95,12 +131,29 @@ title('Logistic Dist Fit of Cs Units Values')
 disp("Is Cs Units data uniform?")
 isuniform(csUnitsArray)
 
-disp("Normal p value for Cs Units data: ")
-pUnitsNorm
-disp("Weibull p value for Cs Units data: ")
-pUnitsWei
-disp("Logistic p value for Cs Units data: ")
-pUnitsLog
+%disp("Normal p value for Cs Units data: ")
+%pUnitsNorm;
+%disp("Weibull p value for Cs Units data: ")
+%pUnitsWei;
+%disp("Logistic p value for Cs Units data: ")
+%pUnitsLog;
+
+pValArray = [pUnitsNorm, pUnitsWei, pUnitsLog];
+
+csUnitsHighestProb = max(pValArray);
+
+maxIndex = find(pValArray==csUnitsHighestProb);
+switch maxIndex
+    case 1
+        disp("Most likely dist for Cs Units data is Normal Distribution.")
+    case 2
+        disp("Most likely dist for Cs Units data is Weibull Distribution.")
+    case 3
+        disp("Most likely dist for Cs Units data is Logistic Distribution.")
+    otherwise
+        error("switch for Cs Units Data did not work")
+end
+disp(csUnitsHighestProb(maxIndex))
 
 
 % CS Total Units Fitting
@@ -125,19 +178,19 @@ figure(22)
 plot(totalUnitsLogParams)
 title('Logistic Dist Fit of Total Units Values')
 
-disp("Is Total Units data uniform?")
-isuniform(totalUnitsArray)
+%disp("Is Total Units data uniform?")
+%isuniform(totalUnitsArray)
 
-disp("Normal p value for Total Units data: ")
-pTotalUnitsNorm
-disp("Weibull p value for Total Units data: ")
-pTotalUnitsWei
-disp("Logistic p value for Total Units data: ")
-pTotalUnitsLog
+%disp("Normal p value for Total Units data: ")
+%pTotalUnitsNorm;
+%disp("Weibull p value for Total Units data: ")
+%pTotalUnitsWei;
+%disp("Logistic p value for Total Units data: ")
+%pTotalUnitsLog;
 
 pValArray = [pTotalUnitsNorm, pTotalUnitsWei, pTotalUnitsLog];
 
-totalUnitsHighestProb = max([pTotalUnitsNorm, pTotalUnitsWei, pTotalUnitsLog]);
+totalUnitsHighestProb = max(pValArray);
 
 maxIndex = find(pValArray==totalUnitsHighestProb);
 switch maxIndex
@@ -150,6 +203,7 @@ switch maxIndex
     otherwise
         error("switch for Total Units Data did not work")
 end
+disp(pValArray(maxIndex))
 
 %todo: at the end compare all values to say what dist values belong to
 

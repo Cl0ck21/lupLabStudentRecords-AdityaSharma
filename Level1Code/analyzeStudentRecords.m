@@ -45,5 +45,14 @@ end
 % gpa, total units, cs units. my guess is a change in range and a degree of
 % "flatness" from normally distributed to uniform.
 
+
+% i tried Weibull, Normal, Logistic, and Uniform distributions to try to figure out 
+% what was used to generate this data, For Cs Gpa, Normal is most likely at
+% p = .1616, Overall Gpa: Normal at p = .1560, Cs Units did not fit any
+% very well with the highest p = 2.12e-9, I feel some kind of uniform
+% makes visual sense, but isuniform = false as well. Most likely Dist for
+% Total Units is logistic at p = .0499, which isn't high enough to confirm
+% the null hypothesis, this seems to be because of the dip around the
+% center of the distribution.
 estimateProbDist(studentRecordsTable);
 
