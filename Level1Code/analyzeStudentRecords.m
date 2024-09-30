@@ -39,9 +39,11 @@ end
 % no relationships over time, data seems very random, but the distribution
 % of data seems different for each of these parameters, will try to fit to
 % distributions to test this.
-graphGPAandUnitsOverTime(studentRecordsTable);
+%graphGPAandUnitsOverTime(studentRecordsTable);
 
 % in terms of tightness of distribution, i think it goes overall gpa, cs
 % gpa, total units, cs units. my guess is a change in range and a degree of
 % "flatness" from normally distributed to uniform.
+
+estimateProbDist(studentRecordsTable);
 
