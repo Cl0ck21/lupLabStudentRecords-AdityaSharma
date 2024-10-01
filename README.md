@@ -13,9 +13,8 @@ Also, there seems to be an issue in opening up any of the function files in Leve
 
 If 1 does not work, the next solution should work for sure. 
 
-2. right click on functions->open function
+2. right click on functions->open function, within any file you are able to open (you should be able to open analyzeStudentRecords.m).
 
-within any file you are able to open (you should be able to open analyzeStudentRecords.m).
 Sorry about this issue, I will try to fix this is I have the time, but this is a low priority for me since it is more of a convenience issue.
 
 Please keep in mind you can still view any of the files as text files outside of Matlab if you prefer, although it will not look as nice.
