@@ -1,4 +1,4 @@
-function [] = GPAvsTotalCredits(data)
+function [] = graphGPAvsTotalCredits(data)
     % graph GPA vs Total Credits for each student
     
     overallGpaArr = getOverallGPAs(data);

@@ -1,4 +1,4 @@
-function [] = GPAvsCreditsPerQuarter(data)
+function [] = graphGPAvsCreditsPerQuarter(data)
 
     % graph all the units and gpas for each quarter on one big graph
     
