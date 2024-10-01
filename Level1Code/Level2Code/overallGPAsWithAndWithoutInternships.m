@@ -17,6 +17,9 @@ function [gpaWith, gpaWithout, avgGpaWith, avgGpaWithout, overallAvgGpaDiffWithW
     avgGpaWith = mean(gpaWith);
     avgGpaWithout = mean(gpaWithout);
     overallAvgGpaDiffWithWithoutInternships = avgGpaWith - avgGpaWithout;
+
+    disp("Overall Average Gpa Difference between students with and without Internships:  ")
+    overallAvgGpaDiffWithWithoutInternships
     
     % disp("removing outliers" + newline)
     gpaWithSizeBefore = size(gpaWith,2);

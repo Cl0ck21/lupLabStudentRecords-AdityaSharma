@@ -56,6 +56,6 @@ graphGPAandUnitsOverTime(studentRecordsTable);
 % center of the distribution.
 estimateProbDist(studentRecordsTable);
 
-
+% 
 graphGPAvsUnitsWithInternshipColor(studentRecordsTable);
 
