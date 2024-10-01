@@ -4,9 +4,6 @@ I will forgo details on this project here, and instead provide this google doc l
 
 To run this project on your own computer, clone the repository into any folder on your computer, open the folder using Matlab, add all code to the path within Matlab by right clicking on the folder you created in the left window and clicking "add folder and all sub-folders to path". Then run the analyzeStudentRecords.m file with Matlab.
 
-
-Note that as of right now, you will see all the graphs as well as 2 extra graphs (graphs 25, 26) which are left over from a workaround, I am working on fixing this right now. 
-
 Also, there seems to be an issue in opening up any of the function files in Level 2 and 3, it seems like if you just click on the files in the project file directory on the left, Matlab throws an error, the workaround for this is to: 
 
 1. restart Matlab, this fixed the issue for my local repository, I did not test this on the folder that came from cloning the repository.
