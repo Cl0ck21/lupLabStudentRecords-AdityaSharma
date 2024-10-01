@@ -104,8 +104,10 @@ end
 
 % we can use this to conclude that internships boost gpa by a moderate amount on avg (a large amount would be more like .3-.5, small <.1) 
 noOutliersNoZeros_CS_GPA_Differences = rmoutliers(noZerosCS_GPA_Differences, "median");
-disp("removed " + string(size(noZerosCS_GPA_Differences, 2) - size(noOutliersNoZeros_CS_GPA_Differences, 2)) + " outliers" + newline)
-disp("avg gpa diff before removing outliers:")
-avgGpaChange
-disp("avg gpa diff after removing outliers:")
-avgGpaChange = mean(noOutliersNoZeros_CS_GPA_Differences)
+
+
+% disp("removed " + string(size(noZerosCS_GPA_Differences, 2) - size(noOutliersNoZeros_CS_GPA_Differences, 2)) + " outliers" + newline)
+% disp("avg gpa diff before removing outliers:")
+% avgGpaChange
+% disp("avg gpa diff after removing outliers:")
+% avgGpaChange = mean(noOutliersNoZeros_CS_GPA_Differences)
