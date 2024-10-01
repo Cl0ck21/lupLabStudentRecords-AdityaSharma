@@ -7,7 +7,7 @@ To run this project on your own computer, clone the repository into any folder o
 
 Note that as of right now, you will see all the graphs as well as 2 extra graphs (graphs 25, 26) which are left over from a workaround, I am working on fixing this right now. 
 
-Also, there seems to be an issue in opening up any of the function files in Level 2 and 3, it seems like if you just click on the files in the project file directory on the left, Matlab throws an error, the workaround for this is to 
+Also, there seems to be an issue in opening up any of the function files in Level 2 and 3, it seems like if you just click on the files in the project file directory on the left, Matlab throws an error, the workaround for this is to: 
 
 right click on functions->open function
 
