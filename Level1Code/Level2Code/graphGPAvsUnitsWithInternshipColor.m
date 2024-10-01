@@ -12,12 +12,15 @@ for ii=1:size(data,1)
 end
 
 % handle inits to workaround legend issues
-figure(25);
+f1 = figure(25);
 title('Ignore this graph')
 h1 = scatter(1, 1);
-figure(26);
+f2 = figure(26);
 title('Ignore this graph')
 h2 = scatter(1, 1);
+
+delete(f1);
+delete(f2);
 
 figure(23);
 for ii=1:size(data,1)
